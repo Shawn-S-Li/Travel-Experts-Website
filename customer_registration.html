@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" type="text/css" href="mysite.css">
+
+    <script>
+        // validate home phone and business phone numbers
+        function validateNumber(id, error) {
+            if (isNaN(Number(id.value))) {
+                error.style.display = "inline";
+            }
+            else {
+                error.style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 align="center">Customer Registration</h1>
+    <form action="https://www.w3schools.com/action_page.php" method="POST" target="_blank">
+        <fieldset style="background-color: azure; border: solid 2px black;">
+            <legend style="font-size: x-large;"><br><br>Create Your Account</legend>
+            <div class="parent">
+                <div class="div1">
+                    First Name <br> <input type="text" name="firstname" required> <br>
+                    Last Name<br> <input type="text" name="lastname" required> <br>
+                    Home address<br> <input type="text" address="homeaddress" required> <br>
+                    City/Town<br> <input type="text" city="cityname" required> <br>
+                    State/Province<br> <input type="text" state_province="state_province_name" required> <br>
+                    ZIP/Postal Code<br> <input type="text" zip_postalcode="zip_postalcode" required> <br>
+                    Country<br> <input type="text" country="countryname" required> <br>
+                    Email address<br> <input type="text" email="emailaddress" required> <br>
+                    Home phone number<br><input type="text" id="homenumber"
+                        onkeyup="validateNumber(this, document.getElementById('errhomeph'))">&nbsp;
+                    <span id='errhomeph' style="color:red;display:none">&#x2717;</span><br>
+                    Business phone number<br><input type="text" id="businessnumber"
+                        onkeyup="validateNumber(this, document.getElementById('errbusinessph'))">&nbsp;
+                    <span id='errbusinessph' style="color:red;display:none">&#x2717;</span>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="div2">
+                    <legend style="font-size: x-large;">Sign In</legend><br>
+                    User ID<br> <input type="userid" required><br>
+                    Password<br> <input type="password" required><br><br>
+                    <input type="submit" value="send the data">
+                </div>
+                <br><br>
+            </div>
+        </fieldset>
+    </form>
+
+    <form action="https://www.w3schools.com/action_page.php" method="POST" target="_blank">
+        <fieldset style="background-color: azure;border: solid 2px black">
+            <legend style="font-size: x-large;"><br><br>Trip Booking </legend>
+            <div class="parent">
+                <div class="div3">
+                    Flying from <br>
+                    <input type="text" name="flyingfrom" required>
+                    <br>
+                    Flying to<br>
+                    <input type="text" name="flyingto" required>
+                </div>
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="div4">
+                    Departing<br>
+                    <input type="date" value="departingdate">
+                    <br><br>
+                    Returning<br>
+                    <input type="date" value="returningdate">
+                </div>
+                <br><br>
+                <div class="div5">
+                    Rooms <br>
+                    <input type="checkbox" name="room1" value="1">1<br>
+                    <input type="checkbox" name="room2" value="2">2<br>
+                    <input type="checkbox" name="room3" value="3">3<br>
+                </div><br><br><br>
+                <div class="div6">
+                    <input type="submit" value="send the data">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</hmtl>

@@ -1,0 +1,42 @@
+
+
+
+
+
+/* flexbox */
+.parent {
+    padding:30px;
+    margin:10px;
+    height: 300px;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.div1 {
+    
+    margin: 5px;
+    padding: 2px;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: center;
+}
+
+.div2 {
+    
+    margin: 5px;
+    padding: 5px;
+    flex: content;
+}
+
+.div3 {
+   
+    margin: 5px;
+    padding: 10px;
+}
+
+.div4 {
+    
+    margin : 5px;
+}
